@@ -1,0 +1,281 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "recebedor",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "titulo",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "nomeEmissor",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "enum BadgeRepositoryMulti.BadgeType",
+				"name": "tipoDeBadge",
+				"type": "uint8"
+			}
+		],
+		"name": "BadgeRegistrada",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "badges",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "titulo",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "descricao",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "nomeEmissor",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "dataEmissao",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "dataValidade",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "urlEvidencia",
+				"type": "string"
+			},
+			{
+				"internalType": "enum BadgeRepositoryMulti.BadgeType",
+				"name": "tipoDeBadge",
+				"type": "uint8"
+			},
+			{
+				"internalType": "bool",
+				"name": "emitida",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_recebedor",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_titulo",
+				"type": "string"
+			}
+		],
+		"name": "getBadgePorTitulo",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "titulo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "descricao",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "nomeEmissor",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dataEmissao",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dataValidade",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "urlEvidencia",
+						"type": "string"
+					},
+					{
+						"internalType": "enum BadgeRepositoryMulti.BadgeType",
+						"name": "tipoDeBadge",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "emitida",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct BadgeRepositoryMulti.Badge",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_recebedor",
+				"type": "address"
+			}
+		],
+		"name": "getContagemDeBadges",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_recebedor",
+				"type": "address"
+			}
+		],
+		"name": "getTitulosDasBadgesDoUsuario",
+		"outputs": [
+			{
+				"internalType": "string[]",
+				"name": "",
+				"type": "string[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_recebedor",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_titulo",
+				"type": "string"
+			}
+		],
+		"name": "isBadgeValida",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_recebedor",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_titulo",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_descricao",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_nomeEmissor",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_dataValidade",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_urlEvidencia",
+				"type": "string"
+			},
+			{
+				"internalType": "enum BadgeRepositoryMulti.BadgeType",
+				"name": "_tipoDeBadge",
+				"type": "uint8"
+			}
+		],
+		"name": "registrarBadge",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

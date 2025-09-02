@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DApp de Badges Digitais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Badges Digitais na Blockchain</h1>
+<div id="wallet-controls">
+    <button id="connectButton">Conectar Carteira</button>
+    <div id="wallet-info" class="hidden">
+        <p id="walletAddress"></p>
+        <button id="disconnectButton">Desconectar</button>
+    </div>
+</div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="card" id="register-section">
+                <h2>Registrar Nova Badge (Apenas Dono)</h2>
+                <form id="registerForm">
+                    <input type="text" id="recipientAddress" placeholder="Endereço do Recebedor" required>
+                    <input type="text" id="badgeTitle" placeholder="Título da Badge" required>
+                    <textarea id="badgeDescription" placeholder="Descrição da Conquista" required></textarea>
+                    <input type="text" id="issuerName" placeholder="Nome do Emissor" required>
+                    <input type="text" id="evidenceUrl" placeholder="URL da Evidência (GitHub, etc.)">
+                    <label for="badgeType">Tipo de Badge:</label>
+                    <select id="badgeType" required>
+                        <option value="0">Curso</option>
+                        <option value="1">Projeto</option>
+                        <option value="2">Evento</option>
+                        <option value="3">Contribuição</option>
+                    </select>
+                    <input type="text" id="expiryDate" placeholder="Validade (Timestamp, 0 para nunca)">
+                    <button type="submit">Registrar Badge</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Consultar Badge</h2>
+                <div class="query-form">
+                    <input type="text" id="queryAddress" placeholder="Digite o Endereço para Consulta">
+                    <button id="queryButton">Consultar</button>
+                </div>
+                <div id="badgeResult">
+                    <p>Os detalhes da badge aparecerão aqui.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <div id="status-modal" class="modal-hidden">
+        <div class="modal-content">
+            <h3>Status da Transação</h3>
+            <p id="status-message">Aguardando...</p>
+            <button id="close-modal-btn">Fechar</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" type="application/javascript"></script>
+    <script src="app.js"></script>
+</body>
+</html>
